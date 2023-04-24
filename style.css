@@ -5,9 +5,9 @@ body {
     font-family: Lato, sans-serif;
 }
 .header {
+    display: block;
     width: 500px;
     margin: 0 auto;
-    display: block;
     text-align: right;
 }
 .header img {
