@@ -10,7 +10,7 @@
   margin: 0 auto;
   text-align: right;
 }
-.table-header img {
+.table-header .table-header__img {
   width: 100%;
 }
 .table-header, 
@@ -36,19 +36,19 @@
 .main-page__second-section {
   display: flex;
 }
-ul {
+.main-page__ul {
   margin: 0;
   padding: 0px;
 }
-li, 
-h3 {
+.main-page__items, 
+.main-page__header {
   list-style: none;
 }
-input, 
-button {
+.task, 
+.button {
   outline: none;
 }
-button {
+.button {
   background: none;
   border: 0px;
   color: #888;
@@ -57,7 +57,7 @@ button {
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-button:hover {
+.button:hover {
   color: #3a3a3a;
 }
 /* Heading */
@@ -97,7 +97,7 @@ button:hover {
 }
 
 /* Task list */
-li {
+.main-page__items {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -105,28 +105,28 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-li > * {
+.main-page__items {
   vertical-align: middle;
 }
 
-li > .main-page__input {
+.main-page__items > .main-page__input {
   margin: 0 10px;
 }
-li > label {
+.main-page__items > .main-page__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-li > .task {
+.main-page__items > .task {
   width: 226px
 }
-button.main-page__button-delete img {
+.main-page__button-delete .main-page__delete {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.main-page__button-delete img:hover {
+.main-page__button-delete .main-page__delete:hover {
   transform: rotateZ(0);
 }
 
