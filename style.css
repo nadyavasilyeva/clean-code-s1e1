@@ -132,21 +132,21 @@ button.main-page__button-delete img:hover {
 }
 
 /* Completed */
-ul #completed-tasks label {
+#main-page__list-second .main-page__items .main-page__label {
     text-decoration: line-through;
     color: #888;
 }
 
 /* Edit Task */
-ul li .task {
+.main-page__ul .main-page__items .task {
     display: none;
 }
 
-ul li .main-page__items .task {
+.main-page__ul .main-page__items-edit .task {
     display: inline-block;
     width: 224px;
 }
 
-ul li .main-page__items label {
+.main-page__ul .main-page__items-edit .main-page__label {
     display: none;
 }
