@@ -6,53 +6,53 @@
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
     <title>Todo App</title>
 </head>
-<body>
-    <header class="table-header">
-         <img src="./eisenhower-matrix.jpg" alt="the Eisenhower matrix table">
-         <a class="table-header__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
-    </header>
-    <section class="main-page">
-        <p class="main-page__block">
-            <label for="new-task" class="main-page__label-header">Add Item</label>
-            <section class="main-page__second-section">
-                 <input class="second-section__input task" id="new-task" type="text">
-                 <button class="second-section__button button">Add</button>
-            </section>
-        </p>
-        <h3 class="main-page__header">Todo</h3>
-        <ul id="main-page__list-first">
-            <li class="main-page__items">
-                 <input type="checkbox" class="main-page__input-checkbox">
-                 <label class="main-page__label">Pay Bills</label>
-                 <input type="text" class="main-page__input task">
-                 <button class="main-page__button-edit button">Edit</button>
-                 <button class="main-page__button-delete button">
-                     <img src="./remove.svg" alt="remove icon" class="main-page__delete">
-                 </button>
-            </li>
-            <li class="main-page__items main-page__items-edit">
-                 <input type="checkbox" class="main-page__input-checkbox">
-                 <label class="main-page__label">Go Shopping</label>
-                 <input type="text" value="Go Shopping" class="main-page__input task">
-                 <button class="main-page__button-edit button">Save</button>
-                 <button class="main-page__button-delete button">
-                     <img src="./remove.svg" alt="remove icon" class="main-page__delete">
-                 </button>
-            </li>
-        </ul>
-        <h3 class="main-page__header">Completed</h3>
-        <ul id="main-page__list-second">
-            <li class="main-page__items-completed">
-                 <input type="checkbox" checked class="main-page__input-checkbox">
-                 <label class="main-page__label">See the Doctor</label>
-                 <input type="text" class="main-page__input task">
-                 <button class="main-page__button-edit button">Edit</button>
-                 <button class="main-page__button-delete button">
-                     <img src="./remove.svg" alt="remove icon" class="main-page__delete">
-                 </button>
-            </li>
-        </ul>
-    </section>
-    <script src="app.js"></script>
+<body class="page">
+  <header class="table-header">
+    <img src="./eisenhower-matrix.jpg" alt="the Eisenhower matrix table" class="table-header__img">
+      <a class="table-header__link" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+  </header>
+  <section class="main-page">
+    <p class="main-page__block">
+      <label for="new-task" class="main-page__label-header">Add Item</label>
+        <section class="main-page__second-section">
+          <input class="second-section__input task" id="new-task" type="text">
+          <button class="second-section__button button">Add</button>
+        </section>
+    </p>
+    <h3 class="main-page__header">Todo</h3>
+    <ul id="main-page__list-first" class="main-page__ul">
+      <li class="main-page__items">
+        <input type="checkbox" class="main-page__input-checkbox">
+        <label class="main-page__label">Pay Bills</label>
+        <input type="text" class="main-page__input task">
+        <button class="main-page__button-edit button">Edit</button>
+        <button class="main-page__button-delete button">
+          <img src="./remove.svg" alt="remove icon" class="main-page__delete">
+        </button>
+      </li>
+      <li class="main-page__items main-page__items-edit">
+        <input type="checkbox" class="main-page__input-checkbox">
+        <label class="main-page__label">Go Shopping</label>
+        <input type="text" value="Go Shopping" class="main-page__input task">
+        <button class="main-page__button-edit button">Save</button>
+        <button class="main-page__button-delete button">
+          <img src="./remove.svg" alt="remove icon" class="main-page__delete">
+        </button>
+      </li>
+    </ul>
+    <h3 class="main-page__header">Completed</h3>
+    <ul id="main-page__list-second" class="main-page__ul">
+      <li class="main-page__items main-page__items-completed">
+        <input type="checkbox" checked class="main-page__input-checkbox">
+        <label class="main-page__label">See the Doctor</label>
+        <input type="text" class="main-page__input task">
+        <button class="main-page__button-edit button">Edit</button>
+        <button class="main-page__button-delete button">
+          <img src="./remove.svg" alt="remove icon" class="main-page__delete">
+        </button>
+      </li>
+    </ul>
+  </section>
+  <script src="app.js"></script>
 </body>
 </html>

@@ -32,22 +32,26 @@ var createNewTaskElement=function(taskString){
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
 
-    label.innerText=taskString;
-    label.className="main-page__label";
+    
 
     //Each elements, needs appending
     checkBox.type="checkbox";
     checkBox.checked = false;
     editInput.type="text";
-    editInput.className="main-page__input";
+    editInput.className="main-page__input task";
+
     listItem.className = "main-page__items";
-    label.innerText = taskString;
-    checkBox.className = "main-page__input-checkbox";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="main-page__button-edit";
+    editButton.className="main-page__button-edit button";
+
+    label.innerText = taskString;
+    label.className="main-page__label";
+    checkBox.className = "main-page__input-checkbox";
+
+    
     deleteButtonImg.className = "main-page__delete";
-    deleteButton.className="main-page__button-delete";
+    deleteButton.className="main-page__button-delete button";
     deleteButtonImg.src="./remove.svg";
     deleteButton.appendChild(deleteButtonImg);
 
@@ -89,7 +93,7 @@ var editTask=function(){
     var editInput=listItem.querySelector("input[type=text]");
     var label=listItem.querySelector(".main-page__label");
     var editBtn=listItem.querySelector(".main-page__button-edit");
-    var containsClass=listItem.classList.contains(".main-page__items-edit");
+    var containsClass = listItem.classList.contains("main-page__items-edit");
     //If class of the parent is .editmode
     if(containsClass){
 
@@ -97,11 +101,9 @@ var editTask=function(){
         //label becomes the inputs value.
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
-        editBtn.style.display = "none";
-    }else{
+    } else {
         editInput.value=label.innerText;
         editBtn.innerText="Save";
-        editInput.style.display = "inline-block";
     }
 
     //toggle .editmode on the parent.
@@ -128,7 +130,7 @@ var taskCompleted=function(){
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
     listItem.classList.toggle("main-page__items");
-    listItem.classList.toggle("main-page__items-completed");
+    listItem.classList.toggle("main-page__items");
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
@@ -142,7 +144,7 @@ var taskIncomplete=function(){
     //Append the task list item to the #incompleteTasks.
     var listItem=this.parentNode;
     listItem.classList.toggle("main-page__items");
-    listItem.classList.toggle("main-page__items-completed");
+    listItem.classList.toggle("main-page__items");
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
 }
